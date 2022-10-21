@@ -1,0 +1,124 @@
+.node {
+    width: 30px;
+    height: 100%;
+    aspect-ratio: 1/1 !important;
+    outline: 1px solid #C3abdd;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2ca;
+    cursor: pointer;
+}
+
+
+
+/* .node-start{
+    background-color: #FECA1F;
+}
+.node-finish{
+    background-color: #FECA1F;
+} */
+
+.spacer{
+    color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+.icon-container{
+    text-align: center;
+}
+.node i {
+    color: #673B95;
+}
+
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+  
+  
+.node-wall {
+    background-color: #271935;
+    animation-name: wallPath;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+  
+.node-shortest-path {
+    animation-name: shortestPath;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+    0% {
+      /* transform: scale(0.3); */
+      background-color: #673B95;
+      /* border-radius: 100%; */
+    }
+  
+    50% {
+      background-color: #FE9D25;
+    }
+  
+    75% {
+      /* transform: scale(1.2); */
+      background-color: #2AD0D1;
+    }
+  
+    100% {
+      /* transform: scale(1); */
+      background-color: #B6E745;
+    }
+}
+  
+@keyframes shortestPath {
+    0% {
+      transform: scale(1);
+      background-color: #FECA1F;
+    }
+  
+    50% {
+      transform: scale(1.1);
+      background-color: #FE9D25;
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: #FECA1F;
+    }
+}
+
+@keyframes wallPath {
+    0% {
+      transform: scale(0.8);
+      /* background-color: #FE9D25; */
+    }
+  
+    50% {
+      transform: scale(1.1);
+      /* background-color: #FFBD6D; */
+    }
+  
+    100% {
+      transform: scale(1);
+      /* background-color: #FE9D25; */
+    }
+}
+
+
